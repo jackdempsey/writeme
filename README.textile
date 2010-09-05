@@ -1,0 +1,30 @@
+h1. Writeme
+
+h3. Description
+
+Writeme is a project with it's beginnings in a post from Tom Preston-Werner: "Readme Driven Development":http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
+
+I think Tom is really on to something, but I imagine we'll need more discussion and maybe a few tools to help it happen. This project hopes to be one of those tools, and also serve as a 'self-hosting' example of how things can work well when writing the README first, and perhaps to even serve to establish a framework for building a specification to help guide great README development. 
+
+h3. Goals
+
+# Increase the quality of the average README
+# Provide a tool to easily generate an excellent README
+# Put some of the thoughts and ideas in  into practice
+
+
+To be honest, I cringed a bit when writing that last clause. Shouldn't READMEs be the work of the various authors, free to be written in whatever style they want? Who am I/we, to define something so restrictive and just horrible sounding as a "README Specification"? 
+
+I don't want to make the same mistakes as the failed Rails Maturity Model. I do think though that there is a happy medium, an inbetween place where we can just put forth a spec, a guide, to what we think makes a great README. Let's look at a few examples:
+
+# "acts_as_commentable":http://github.com/jackdempsey/acts_as_commentable
+I'm rather embarassed by this. I don't remember what state the README was in when I originally imported this into GitHub, but it's in a sorry state of affairs currently. When I look at it, I'm not even sure where to start. This is a good example of why a spec could be useful--provide some guidance as to what is useful to provide, how, etc. 
+# "Rails":http://github.com/rails/rails
+I was actually really surprised when I went here. It's also a bit embarassing--there are random backslashes all over the place, various braces and brackets. I'm not really sure what's going on, but I know I wouldn't like what I see if this was my first introduction into Rails.
+# "devise":http://github.com/plataformatec/devise
+Now this on the other hand is one heck of a README. I might even say that it could possibly be too long--after all, how do we know what should be in a README and what should be in accompanying  documentation? (hint, a spec!). Length aside though, you can tell how much time and effort they've put into this file, and how up to date it is. Which reminds me: last update date should probably be a field in the standard. 
+
+
+h3. Copyright
+
+Copyright (c) 2010 Jack Dempsey. See LICENSE for details.
