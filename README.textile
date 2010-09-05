@@ -24,6 +24,26 @@ I was actually really surprised when I went here. It's also a bit embarassing--t
 # "devise":http://github.com/plataformatec/devise
 Now this on the other hand is one heck of a README. I might even say that it could possibly be too long--after all, how do we know what should be in a README and what should be in accompanying  documentation? (hint, a spec!). Length aside though, you can tell how much time and effort they've put into this file, and how up to date it is. Which reminds me: last update date should probably be a field in the standard. 
 
+h3. Components to a README
+
+In no particular order, at this point:
+
+* last updated at date
+** useful to help people understand how current the information is. How can we make this easy to update?
+* version
+** useful to see what version of the lib is active
+* related tools and versions
+** for things like rubygems, it's useful to know what versions of ruby were used in developing, what's supported, etc
+* A way to differentiate required sections, optional sections, etc (can rely on words like "must", "should", "can" etc)
+* perhaps something like an optional Provides section? So you know quickly what the project provides (ex. Provides: spec for README, executable tool to generate a README)
+
+
+h3. Sections
+
+* Installation
+* Authors & Contributors
+
+
 h3. To Do
 
 # setup a way to track what a README should be. Look to semver.org for inspiration.
