@@ -36,7 +36,7 @@ In no particular order, at this point:
 ** for things like rubygems, it's useful to know what versions of ruby were used in developing, what's supported, etc
 * A way to differentiate required sections, optional sections, etc (can rely on words like "must", "should", "can" etc)
 * perhaps something like an optional Provides section? So you know quickly what the project provides (ex. Provides: spec for README, executable tool to generate a README)
-
+* Take inspiration from a tweet by "@noradio":http://twitter.com/noradio/status/22103797051 and allow for not only contributors but inspiration, blog posts, tweets, etc
 
 h3. Sections
 
