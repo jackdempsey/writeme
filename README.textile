@@ -10,23 +10,35 @@ h3. Goals
 
 # Increase the quality of the average README
 # Provide a tool to easily generate an excellent README
-# Put some of the thoughts and ideas in  into practice
+# Put some of the thoughts and ideas in a semver.org like README spec into practice
 
 
 To be honest, I cringed a bit when writing that last clause. Shouldn't READMEs be the work of the various authors, free to be written in whatever style they want? Who am I/we, to define something so restrictive and just horrible sounding as a "README Specification"? 
 
-I don't want to make the same mistakes as the failed Rails Maturity Model. I do think though that there is a happy medium, an inbetween place where we can just put forth a spec, a guide, to what we think makes a great README. Let's look at a few examples:
+I don't want to make the same mistakes as the failed Rails Maturity Model. I do think though that there is a happy medium, an in-between place where we can just put forth a spec/guide, to what we think makes a great README. Let's look at a few examples:
 
 # "acts_as_commentable":http://github.com/jackdempsey/acts_as_commentable
 I'm rather embarassed by this. I don't remember what state the README was in when I originally imported this into GitHub, but it's in a sorry state of affairs currently. When I look at it, I'm not even sure where to start. This is a good example of why a spec could be useful--provide some guidance as to what is useful to provide, how, etc. 
 # "Rails":http://github.com/rails/rails
 I was actually really surprised when I went here. It's also a bit embarassing--there are random backslashes all over the place, various braces and brackets. I'm not really sure what's going on, but I know I wouldn't like what I see if this was my first introduction into Rails.
 # "devise":http://github.com/plataformatec/devise
-Now this on the other hand is one heck of a README. I might even say that it could possibly be too long--after all, how do we know what should be in a README and what should be in accompanying  documentation? (hint, a spec!). Length aside though, you can tell how much time and effort they've put into this file, and how up to date it is. Which reminds me: last update date should probably be a field in the standard. 
+Now this on the other hand is one heck of a README. I might even say that it could possibly be too long--after all, how do we know what should be in a README and what should be in accompanying  documentation? (hint, a spec!). Length aside though, you can tell how much time and effort they've put into this file, and how up to date it is. Which reminds me: last update date should probably be a field in the standard.
+# "resque":http://github.com/defunkt/resque
+Good god, look at that! Want to know about it in general? First section. Want to see where it came from? Boom, blog post. Then it just goes into a list of the various components of the system, a glossary of sorts of what each piece means, and more. Again, the only thing I could potentially critique is the length and fact that there's no convention of what should come where, but this is so far ahead of the average, it's worth showcasing. People know what's in app/ if they've Rails before. Is it naive to believe we could benefit from all agreeing to a certain uniformity with our README's?  
 
-h3. Components to a README
+h3. Potential Sections
 
-In no particular order, at this point:
+* Description
+* Usage
+* Installation
+* API
+* Authors & Contributors
+* Inspiration
+* Further reading
+* Copyright
+
+
+h3. Other Potentially Useful Components/Features
 
 * last updated at date
 ** useful to help people understand how current the information is. How can we make this easy to update?
@@ -38,16 +50,15 @@ In no particular order, at this point:
 * perhaps something like an optional Provides section? So you know quickly what the project provides (ex. Provides: spec for README, executable tool to generate a README)
 * Take inspiration from a tweet by "@noradio":http://twitter.com/noradio/status/22103797051 and allow for not only contributors but inspiration, blog posts, tweets, etc
 
-h3. Sections
-
-* Installation
-* Authors & Contributors
-
-
 h3. To Do
 
 # setup a way to track what a README should be. Look to semver.org for inspiration.
 # start tracking what components a README needs
+# should README's have other files they link out to? Things like LICENSE TODO etc? Feels like some cases would benefit from having that broken into external files, while some projects might just want it all inline. You can choose?
+
+h3. Notes
+
+# in writing this I often felt a bit of cognitive dissonance from the "where the hell should this piece go?" Thoughts like that make me even more convinced that even if it's a one blog post long entry on the topic, a spec that lays out what a good README looks like, and a small tool to generate one for you would help so many of us. 
 
 h3. Copyright
 
