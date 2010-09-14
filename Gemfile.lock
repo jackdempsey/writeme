@@ -1,3 +1,8 @@
+PATH
+  remote: /Users/jack/git/aruba
+  specs:
+    aruba (0.2.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -19,4 +24,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aruba!
   cucumber (= 0.8.5)
