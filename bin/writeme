@@ -1,0 +1,8 @@
+puts %{
+Usage:
+  writeme [options]
+
+Options:
+  -v, [--version]  # Show Writeme version number and quit
+  -h, [--help]     # Show this help message and quit
+}

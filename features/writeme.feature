@@ -1,9 +1,8 @@
-Feature: something something
-  In order to something something
-  A user something something
-  something something something
+Feature: Generating a README
+  In order to make README generation easier
+  A project's developer
+  should be able to use an executable writeme script to generate a README
 
-  Scenario: something something
-    Given inspiration
-    When I create a sweet new gem
-    Then everyone should see how awesome I am
+  Scenario: Running writeme with no arguments
+    When I run writeme with no arguments
+    Then I should see the help output
