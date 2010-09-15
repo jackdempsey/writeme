@@ -9,3 +9,8 @@ end
 Then /^I should see the help output$/ do
   Then %{the output should contain "# Show this help message and quit"}
 end
+
+Then /^I should see the current version displayed$/ do
+  Then %{the output should contain "writeme version #{Writeme::VERSION}"}
+end
+
