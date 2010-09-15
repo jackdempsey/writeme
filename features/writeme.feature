@@ -15,7 +15,6 @@ Feature: Generating a README
     When I run writeme with "--help"
     Then I should see the help output
 
-  @focus
   Scenario: Running writeme with -v
     When I run writeme with "-v"
     Then I should see the current version displayed

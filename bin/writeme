@@ -1,8 +1,30 @@
-puts %{
+#!/usr/bin/env ruby
+
+require 'pp'
+require 'rubygems'
+require 'thor'
+
+$:.unshift File.expand_path(File.join('..','..','lib'), __FILE__)
+require 'writeme'
+
+class WritemeRunner < Thor
+  map ["-v", "--version"] => :version
+
+  desc 'version', "print the current version for writeme"
+  def version
+    puts "writeme version #{Writeme::VERSION}"
+  end
+
+  def help
+    puts %{
 Usage:
   writeme [options]
 
 Options:
   -v, [--version]  # Show Writeme version number and quit
   -h, [--help]     # Show this help message and quit
-}
+    }
+  end
+end
+
+WritemeRunner.start

@@ -18,6 +18,7 @@ GEM
       trollop (~> 1.16.2)
     json_pure (1.4.6)
     term-ansicolor (1.0.5)
+    thor (0.14.0)
     trollop (1.16.2)
 
 PLATFORMS
@@ -26,3 +27,4 @@ PLATFORMS
 DEPENDENCIES
   aruba!
   cucumber (= 0.8.5)
+  thor
