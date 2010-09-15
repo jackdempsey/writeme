@@ -1,7 +1,7 @@
-Feature: Generating a README
-  In order to make README generation easier
-  A project's developer
-  should be able to use an executable writeme script to generate a README
+Feature: General executable usage
+  In order to facilitate successful usage
+  the writeme executable
+  should provide a useful set of basic features
 
   Scenario: Running writeme with no arguments
     When I run writeme with no arguments
