@@ -9,7 +9,25 @@ $:.unshift File.expand_path(File.join('..','..','lib'), __FILE__)
 require 'writeme'
 
 class WritemeRunner < Thor
+  def initialize(*)
+    super
+    @filename = Writeme.output_filename
+    @output_type = :text
+    @content = ''
+  end
+
+  # commands
   map ["-v", "--version"] => :version
+  map ["-g", "--generate"] => :generate
+
+  desc 'generate', 'generate a README'
+  def generate(name)
+    puts "Generating README for #{name}"
+    @content = YAML.dump(Writeme.defaults)
+    # merge with defaults
+    # figure out output format
+    File.open(@filename, 'wb') { |f| f.puts @content }
+  end
 
   desc 'version', "print the current version for writeme"
   def version
@@ -25,6 +43,13 @@ Options:
   -v, [--version]  # Show Writeme version number and quit
   -h, [--help]     # Show this help message and quit
     }
+  end
+
+  def method_missing(*args)
+    if args.size == 1
+      # they're passing in the project name
+      generate(args[0])
+    end
   end
 end
 
