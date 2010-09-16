@@ -8,3 +8,11 @@ require 'aruba'
 require 'test/unit/assertions'
 
 World(Test::Unit::Assertions)
+
+def file_exists(filename)
+  check_file_presence([filename], true)
+end
+
+def no_file_exists(filename)
+  check_file_presence([filename], false)
+end

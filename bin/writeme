@@ -24,15 +24,15 @@ class WritemeRunner < Thor
   map ["-g", "--generate"] => :generate
 
   desc 'generate', 'generate a README'
-  def generate(name)
-    puts "Generating README for #{name}"
-    # merge with defaults
-
+  def generate
     data = Writeme.defaults
 
-    if File.exists?('./writeme.config')
+    if File.exists?('./writeme.yml')
       # merge in config for current project
-      data.merge!(YAML.load_file('./writeme.config'))
+      data.merge!(YAML.load_file('./writeme.yml'))
+    else
+      STDERR.puts "No writeme.yml file found. Please create one in the current directory or pass in its location via -c/--config"
+      exit
     end
 
     template = Tilt.new(File.join(File.dirname(__FILE__), *%w[.. templates README.erb]))

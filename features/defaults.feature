@@ -14,5 +14,6 @@ Feature: Default values
           :copyright: "2010 Jack Dempsey"
           :license: "See LICENSE for details"
       """
+    And a project writeme.yml is present
     When I generate a README without specifying a creator
     Then the README file should contain "Jack Dempsey"
