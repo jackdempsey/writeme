@@ -1,12 +1,9 @@
-PATH
-  remote: /Users/jack/git/aruba
-  specs:
-    aruba (0.2.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.0.0)
     archive-tar-minitar (0.5.2)
+    aruba (0.2.1)
     builder (2.1.2)
     columnize (0.3.1)
     cucumber (0.8.5)
@@ -40,7 +37,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aruba!
+  activesupport
+  aruba
   cucumber (= 0.8.5)
   liquid
   ruby-debug19 (= 0.11.6)
