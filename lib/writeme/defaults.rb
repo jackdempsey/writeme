@@ -6,14 +6,15 @@ module Writeme
   end
 
   def self.defaults_filename
-    '.writeme.yml'
+    "templates/.writeme.yml"
   end
 
   def self.defaults
+    # setup keys in our data hash for pieces that the templates will assume are present
+    defaults = %w(name description usage requirements requirement_steps contributing_steps creators legal).inject({}) {|hash, item| hash[item.to_sym] = nil; hash}
     if File.exists?(defaults_filename)
-      YAML.load_file(defaults_filename)[:defaults] 
-    else
-      {} # if no default, return a hash so we can merge project data into it nicely later downstream
+      # merge in any user defaults
+      defaults.merge!(YAML.load_file(defaults_filename)[:defaults])
     end
   end
 end
