@@ -1,14 +1,9 @@
-@focus
 Feature: Default values
   In order to make Writeme even easier to use
   the Writeme library
   should be able to read default values from a ~/.writeme.yml config file
 
-  Scenario: Generating a README
-    When I generate a README
-    Then the stdout should contain "Generating README"
-
-  Scenario: Generating a README without specifying creator
+  Scenario: Using defaults from a config file
     Given I have a config file with:
       """
       ---
