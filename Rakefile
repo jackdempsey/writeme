@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "writeme"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{easily generate well structured READMEs}
+    gem.description = %Q{easily generate well structured READMEs}
     gem.email = "jack dot dempsey at gmail dot com"
     gem.homepage = "http://github.com/jackdempsey/writeme"
     gem.authors = ["Jack Dempsey"]
