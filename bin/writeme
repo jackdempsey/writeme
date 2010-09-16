@@ -4,7 +4,7 @@ require 'pp'
 require 'rubygems'
 require 'thor'
 require 'ruby-debug'
-require 'liquid'
+require 'erubis'
 require 'active_support/core_ext/hash/keys'
 
 $:.unshift File.expand_path(File.join('..','..','lib'), __FILE__)
@@ -26,8 +26,21 @@ class WritemeRunner < Thor
   def generate(name)
     puts "Generating README for #{name}"
     # merge with defaults
-    @template = Liquid::Template.parse("templates/README") # read in appropriate template
-    @content = @template.render(data.stringify_keys)
+
+    data = Writeme.defaults
+
+    if File.exists?('./writeme.config')
+      # merge in config for current project
+      data.merge!(YAML.load_file('./writeme.config'))
+    end
+
+    template = File.read(File.join(File.dirname(__FILE__), *%w[.. templates README]))# read in appropriate template
+    erubis_template = Erubis::Eruby.new(template)
+    begin
+      @content = erubis_template.result(data)
+    rescue => e
+      puts "error in generating readme: #{e}"
+    end
 
     # figure out output format and thus which template to read
     File.open(@filename, 'wb') { |f| f << @content }
