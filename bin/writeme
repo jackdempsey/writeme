@@ -35,13 +35,8 @@ class WritemeRunner < Thor
       data.merge!(YAML.load_file('./writeme.config'))
     end
 
-    template = File.read(File.join(File.dirname(__FILE__), *%w[.. templates README]))# read in appropriate template
-    erubis_template = Erubis::Eruby.new(template)
-    begin
-      @content = erubis_template.result(data)
-    rescue => e
-      puts "error in generating readme: #{e}"
-    end
+    template = Tilt.new(File.join(File.dirname(__FILE__), *%w[.. templates README.erb]))
+    @content = template.render(nil, data)
 
     # figure out output format and thus which template to read
     File.open(@filename, 'wb') { |f| f << @content }
