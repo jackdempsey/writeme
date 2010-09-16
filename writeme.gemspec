@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{writeme}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jack Dempsey"]
@@ -28,10 +28,9 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/writeme",
+     "cucumber.yml",
      "features/bin/general_usage.feature",
      "features/defaults.feature",
-     "features/step_definitions/default_steps.rb",
-     "features/step_definitions/generation_steps.rb",
      "features/step_definitions/writeme_steps.rb",
      "features/support/env.rb",
      "lib/writeme.rb",
@@ -39,9 +38,11 @@ Gem::Specification.new do |s|
      "lib/writeme/version.rb",
      "templates/.writeme.yml",
      "templates/README.erb",
-     "templates/README.yml",
+     "templates/writeme.yml",
      "test/helper.rb",
-     "test/test_writeme.rb"
+     "test/test_writeme.rb",
+     "writeme.gemspec",
+     "writeme.yml"
   ]
   s.homepage = %q{http://github.com/jackdempsey/writeme}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -60,16 +61,19 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
-      s.add_development_dependency(%q<cucumber>, [">= 0"])
+      s.add_development_dependency(%q<cucumber>, ["~> 0.8.5"])
+      s.add_development_dependency(%q<aruba>, ["= 0.2.1"])
     else
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
       s.add_dependency(%q<yard>, [">= 0"])
-      s.add_dependency(%q<cucumber>, [">= 0"])
+      s.add_dependency(%q<cucumber>, ["~> 0.8.5"])
+      s.add_dependency(%q<aruba>, ["= 0.2.1"])
     end
   else
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     s.add_dependency(%q<yard>, [">= 0"])
-    s.add_dependency(%q<cucumber>, [">= 0"])
+    s.add_dependency(%q<cucumber>, ["~> 0.8.5"])
+    s.add_dependency(%q<aruba>, ["= 0.2.1"])
   end
 end
 
