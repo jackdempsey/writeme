@@ -1,0 +1,30 @@
+Name: {{ name }}
+Description: {{ description }}
+
+Getting Started
+
+  Usage: {{ usage }}
+
+  Installation: 
+
+    Requirements: {{ requirements }}
+
+    Steps:
+      {{ for step in steps }}
+        {{ step }}
+
+Getting Involved
+
+  Contributing:
+    {{ for step in contributing_steps }}
+      {{ step }}
+
+Creators
+  
+  Authors: {{ authors }}
+  Contributors: {{ contributors }}
+
+Legal
+
+  Copyright: {{ copyright }}
+  License: {{ license }}
