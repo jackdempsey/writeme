@@ -5,6 +5,7 @@ gem "aruba"
 gem "thor"
 gem "liquid"
 gem "activesupport"
+gem 'tilt'
 gem 'erubis'
 
 if RUBY_VERSION < '1.9'

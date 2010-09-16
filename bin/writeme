@@ -5,6 +5,7 @@ require 'rubygems'
 require 'thor'
 require 'ruby-debug'
 require 'erubis'
+require 'tilt'
 require 'active_support/core_ext/hash/keys'
 
 $:.unshift File.expand_path(File.join('..','..','lib'), __FILE__)
