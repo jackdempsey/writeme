@@ -57,13 +57,6 @@ Options:
   -h, [--help]     # Show this help message and quit
     }
   end
-
-  def method_missing(*args)
-    if args.size == 1
-      # they're passing in the project name
-      generate(args[0])
-    end
-  end
 end
 
 WritemeRunner.start
