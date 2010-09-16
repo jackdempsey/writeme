@@ -9,3 +9,4 @@ else
 end
 
 gem "thor"
+gem "liquid"
