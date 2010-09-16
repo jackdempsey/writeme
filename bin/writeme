@@ -4,6 +4,8 @@ require 'pp'
 require 'rubygems'
 require 'thor'
 require 'ruby-debug'
+require 'liquid'
+require 'active_support/core_ext/hash/keys'
 
 $:.unshift File.expand_path(File.join('..','..','lib'), __FILE__)
 require 'writeme'
@@ -23,10 +25,12 @@ class WritemeRunner < Thor
   desc 'generate', 'generate a README'
   def generate(name)
     puts "Generating README for #{name}"
-    @content = YAML.dump(Writeme.defaults)
     # merge with defaults
-    # figure out output format
-    File.open(@filename, 'wb') { |f| f.puts @content }
+    @template = Liquid::Template.parse("templates/README") # read in appropriate template
+    @content = @template.render(data.stringify_keys)
+
+    # figure out output format and thus which template to read
+    File.open(@filename, 'wb') { |f| f << @content }
   end
 
   desc 'version', "print the current version for writeme"
