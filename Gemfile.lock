@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    abstract (1.0.0)
     activesupport (3.0.0)
     archive-tar-minitar (0.5.2)
     aruba (0.2.1)
@@ -13,6 +14,8 @@ GEM
       json_pure (~> 1.4.3)
       term-ansicolor (~> 1.0.4)
     diff-lcs (1.1.2)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
     gherkin (2.1.5)
       trollop (~> 1.16.2)
     json_pure (1.4.6)
@@ -40,6 +43,7 @@ DEPENDENCIES
   activesupport
   aruba
   cucumber (= 0.8.5)
+  erubis
   liquid
   ruby-debug19 (= 0.11.6)
   thor

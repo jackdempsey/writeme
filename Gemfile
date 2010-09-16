@@ -5,6 +5,7 @@ gem "aruba"
 gem "thor"
 gem "liquid"
 gem "activesupport"
+gem 'erubis'
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", "~> 0.10.3"
