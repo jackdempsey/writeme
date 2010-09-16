@@ -18,3 +18,7 @@ Feature: General executable usage
   Scenario: Running writeme with -v
     When I run writeme with "-v"
     Then I should see the current version displayed
+
+  Scenario: Running writeme with --version
+    When I run writeme with "--version"
+    Then I should see the current version displayed
