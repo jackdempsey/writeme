@@ -1,4 +1,4 @@
-Feature: General executable usage
+Feature: Commandline options
   In order to facilitate successful usage
   the writeme executable
   should provide a useful set of basic features
@@ -22,7 +22,3 @@ Feature: General executable usage
   Scenario: Running writeme with --version
     When I run writeme with "--version"
     Then I should see the current version displayed
-
-  Scenario: Generating a README without a writeme.yml config
-    When I generate a README without a writeme.yml present
-    Then the stderr should contain "No writeme.yml file found"
