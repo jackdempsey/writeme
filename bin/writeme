@@ -48,11 +48,13 @@ class WritemeRunner < Thor
   end
 
   def help
+    #TODO put this in a USAGE file
     puts %{
 Usage:
   writeme [options]
 
 Options:
+  -g, [--generate] # Generate a README
   -v, [--version]  # Show Writeme version number and quit
   -h, [--help]     # Show this help message and quit
     }

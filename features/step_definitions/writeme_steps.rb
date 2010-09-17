@@ -25,7 +25,9 @@ When /^I run writeme with "([^"]*)"$/ do |arguments|
 end
 
 Then /^I should see the help output$/ do
-  Then %{the output should contain "# Show this help message and quit"}
+  Then %{the output should contain "-v, [--version]  # Show Writeme version number and quit"}
+  Then %{the output should contain "-h, [--help]     # Show this help message and quit"}
+  Then %{the output should contain "-g, [--generate] # Generate a README"}
 end
 
 Then /^I should see the current version displayed$/ do
