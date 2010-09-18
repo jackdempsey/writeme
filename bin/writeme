@@ -7,6 +7,8 @@ require 'erubis'
 require 'tilt'
 require 'active_support/core_ext/hash/keys'
 
+Tilt.register 'erb', Tilt::ErubisTemplate
+
 begin
 require 'ruby-debug'
 rescue LoadError
