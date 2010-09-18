@@ -4,15 +4,19 @@ Description: <%= description %>
 
 Getting Started
 
-  Usage: <%= usage %>
+  Usage: <%= getting_started[:usage] %>
 
   Installation: 
 
-    Requirements: <%= requirements %>
-
-    <% if requirement_steps %>
+    <% if getting_started[:requirements] %>
+      Requirements:
+      <% getting_started[:requirements].each do |step| %>
+        <%= step %>
+      <% end %>
+    <% end %>
+    <% if getting_started[:installation][:requirements_steps] %>
       Steps:
-        <% requirement_steps.each do |step| %>
+        <% getting_started[:installation][:requirements_steps].each do |step| %>
           <%= step %>
         <% end %>
     <% end %>
@@ -20,8 +24,8 @@ Getting Started
 Getting Involved
 
   Contributing:
-    <% if contributing_steps %>
-      <% contributing_steps.each do |step| %>
+    <% if getting_involved[:contributing_steps] %>
+      <% getting_involved[:contributing_steps].each do |step| %>
         <%= step %>
       <% end %>
     <% end %>

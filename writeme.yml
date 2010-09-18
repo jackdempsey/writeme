@@ -3,13 +3,16 @@
 :description: "Writeme is a README generator that seeks to improve the general quality and organization of one of the most imporant and often overlooked pieces to our software."
 
 :getting_started:
-  :usage: 
+  :usage: "'writeme -g' will generate a new README file, reading project information from a writeme.yml file. See writeme -h for more details."
   :installation:
     :requirements:
-    :steps:
+    - ruby 1.8.7 or greater
+    - rubygems 1.3.7
+    :requirements_steps:
+    - gem install writeme
 
 :getting_involved:
-  :contributing:
+  :contributing_steps:
   - "Fork the project."
   - "Make your feature addition or bug fix on a topic branch."
   - "Add tests for it if applicable (docs may not need it, code might)"
