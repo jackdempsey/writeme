@@ -1,11 +1,14 @@
 source "http://rubygems.org"
 
-gem "cucumber", "0.8.5"
-gem "aruba"
 gem "thor"
 gem "activesupport"
 gem 'tilt'
 gem 'erubis'
+
+group :development do
+  gem "cucumber", "0.8.5"
+  gem "aruba"
+end
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", "~> 0.10.3"
