@@ -21,7 +21,6 @@ GEM
     json_pure (1.4.6)
     linecache19 (0.5.11)
       ruby_core_source (>= 0.1.4)
-    liquid (2.2.2)
     ruby-debug-base19 (0.11.24)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
@@ -45,7 +44,6 @@ DEPENDENCIES
   aruba
   cucumber (= 0.8.5)
   erubis
-  liquid
   ruby-debug19 (= 0.11.6)
   thor
   tilt

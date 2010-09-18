@@ -3,7 +3,6 @@ source "http://rubygems.org"
 gem "cucumber", "0.8.5"
 gem "aruba"
 gem "thor"
-gem "liquid"
 gem "activesupport"
 gem 'tilt'
 gem 'erubis'
